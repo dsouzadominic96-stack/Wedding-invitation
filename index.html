@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dominic & Pramela – Wedding Invitation</title>
+<meta name="description" content="You are invited to the wedding of Dominic and Dr. Pramela – January 2027, Udupi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#fbf8ef; --cream:#eef0e1; --gold:#8a9d7a; --gold-light:#c6d3b9;
+    --marigold:#a3b58f; --maroon:#4e6b50; --ink:#2f3b30; --soft:#68786a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600}
+  .script{font-family:'Great Vibes',cursive;font-weight:400}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:12px 16px;background:rgba(251,246,236,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--gold-light);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+  nav a{color:var(--maroon);text-decoration:none}
+  nav a:hover{color:var(--marigold)}
+
+  /* hero */
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 20px 60px;position:relative;
+    background:radial-gradient(ellipse at top,#fffcf3 0%,var(--ivory) 55%,var(--cream) 100%)}
+  .garland{font-size:1.6rem;letter-spacing:.4em;color:var(--marigold);margin-bottom:10px}
+  .verse{max-width:520px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--soft)}
+  .verse small{display:block;margin-top:4px;font-style:normal;font-size:.85rem;letter-spacing:.1em;color:var(--gold)}
+  .kicker{margin-top:34px;letter-spacing:.35em;text-transform:uppercase;font-size:.8rem;color:var(--gold)}
+  .names{font-size:clamp(3.2rem,12vw,6.5rem);color:var(--maroon);line-height:1.1;margin:8px 0}
+  .names .amp{display:block;font-size:.45em;color:var(--gold);margin:-4px 0}
+  .dr{font-size:.9rem;color:var(--soft);letter-spacing:.1em}
+  .date-line{margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--ink)}
+  .scroll{margin-top:36px;color:var(--gold);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;animation:bob 2s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(6px)}}
+
+  /* petals */
+  .petal{position:absolute;top:-30px;width:12px;height:16px;background:var(--marigold);border-radius:80% 0 80% 0;opacity:.55;animation:fall linear infinite;pointer-events:none}
+  @keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+
+  section{padding:80px 20px;max-width:960px;margin:0 auto;text-align:center}
+  .divider{color:var(--gold);letter-spacing:.5em;margin:6px 0 26px;font-size:1rem}
+  h2{font-size:2.4rem;color:var(--maroon)}
+  .lead{max-width:560px;margin:10px auto 0;color:var(--soft)}
+
+  /* hosts */
+  .hosts{background:var(--cream);max-width:none}
+  .hosts .inner{max-width:640px;margin:0 auto}
+  .hosts p{font-family:'Cormorant Garamond',serif;font-size:1.35rem}
+  .hosts strong{color:var(--maroon)}
+
+  /* countdown */
+  .countdown{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+  .cd{width:92px;padding:16px 6px;border:1px solid var(--gold-light);border-radius:14px;background:#fff}
+  .cd b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--maroon);line-height:1}
+  .cd span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+  .cd-note{margin-top:14px;color:var(--soft);font-size:.9rem}
+
+  /* events */
+  .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:34px}
+  .card{background:#fff;border:1px solid var(--gold-light);border-radius:18px;padding:30px 22px;box-shadow:0 8px 24px rgba(78,107,80,.09);transition:transform .25s}
+  .card:hover{transform:translateY(-5px)}
+  .card .ico{font-size:2.2rem}
+  .card h3{font-size:1.7rem;color:var(--maroon);margin:6px 0 2px}
+  .card .when{color:var(--gold);font-weight:500;letter-spacing:.04em}
+  .card .where{margin:10px 0 16px;color:var(--soft);font-size:.95rem}
+  .btn{display:inline-block;padding:10px 22px;border-radius:999px;border:1px solid var(--maroon);color:var(--maroon);text-decoration:none;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:inherit;transition:.2s}
+  .btn:hover{background:var(--maroon);color:#fff}
+  .btn.solid{background:var(--maroon);color:#fff}
+  .btn.solid:hover{background:var(--marigold);border-color:var(--marigold)}
+
+  /* RSVP */
+  .rsvp{background:var(--cream);max-width:none}
+  form{max-width:520px;margin:28px auto 0;text-align:left;display:grid;gap:16px}
+  label{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+  input[type=text],input[type=number],textarea,select{width:100%;margin-top:5px;padding:12px 14px;border:1px solid var(--gold-light);border-radius:10px;background:#fff;font:inherit;color:var(--ink)}
+  textarea{min-height:90px;resize:vertical}
+  fieldset{border:none}
+  .checks{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px}
+  .checks label{text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)}
+  form .btn{justify-self:center;margin-top:6px}
+  .fineprint{text-align:center;font-size:.8rem;color:var(--soft);margin-top:12px}
+
+  /* contact + footer */
+  .contact a{color:var(--maroon);font-weight:500;text-decoration:none;font-size:1.2rem}
+  footer{background:var(--maroon);color:#eef2e4;text-align:center;padding:50px 20px}
+  footer .script{font-size:2.6rem;color:var(--gold-light)}
+  footer p{margin-top:8px;font-size:.9rem}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:520px){nav{gap:12px;font-size:.68rem}.cd{width:72px}.cd b{font-size:1.8rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top">Home</a><a href="#events">Events</a><a href="#rsvp">RSVP</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="garland">🌿 ❀ 🌿</div>
+  <p class="verse">“So they are no longer two, but one. Therefore what God has joined together let man not separate.”<small>MATTHEW 19:6</small></p>
+  <p class="kicker">Together with their families</p>
+  <h1 class="names script">Dominic<span class="amp">&amp;</span>Pramela</h1>
+  <p class="dr">Dominic &nbsp;with&nbsp; Dr. Pramela</p>
+  <p class="date-line">15 – 18 January 2027 &nbsp;·&nbsp; Udupi, Karnataka</p>
+  <a class="scroll" href="#hosts">Scroll ↓</a>
+</header>
+
+<section class="hosts" id="hosts" style="padding:80px 20px">
+  <div class="inner reveal">
+    <div class="divider">❀ ❀ ❀</div>
+    <p><strong>Mr. Joseph Dsouza &amp; Mrs. Cynthia Dsouza</strong><br>request the honour of your presence at the wedding of their beloved son</p>
+    <h2 class="script" style="font-size:3.4rem;margin:16px 0 4px">Dominic</h2>
+    <p style="font-style:italic;color:var(--gold)">with</p>
+    <h2 class="script" style="font-size:3.4rem;margin:4px 0 8px">Dr. Pramela</h2>
+    <p style="font-size:1.1rem;color:var(--soft)">D/o Mr. Philip Rodrigues &amp; Mrs. Tressy Rodrigues</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Counting down to the big day</h2>
+  <div class="divider">✦ ✦ ✦</div>
+  <div class="countdown" id="countdown">
+    <div class="cd"><b id="d">--</b><span>Days</span></div>
+    <div class="cd"><b id="h">--</b><span>Hours</span></div>
+    <div class="cd"><b id="m">--</b><span>Minutes</span></div>
+    <div class="cd"><b id="s">--</b><span>Seconds</span></div>
+  </div>
+  <p class="cd-note">until the Holy Matrimony · Monday, 18 January 2027, 3:30 PM IST</p>
+</section>
+
+<section id="events" class="reveal">
+  <h2>Celebrations</h2>
+  <div class="divider">✦ ✦ ✦</div>
+  <p class="lead">Three days of joy, blessings and togetherness. We would love to have you with us for each one.</p>
+
+  <div class="events">
+    <div class="card">
+      <div class="ico">🥥</div>
+      <h3>Roce Ceremony</h3>
+      <div class="when">Friday, 15 January 2027<br>6:00 PM</div>
+      <p class="where"><b>At our Residence</b><br>Near Supreme Nice Chunnam, N.K. Road, Pandeshwar, Sasthan</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pandeshwar+Sasthan+Udupi+Karnataka">Directions</a>
+    </div>
+
+    <div class="card">
+      <div class="ico">⛪</div>
+      <h3>Holy Matrimony</h3>
+      <div class="when">Monday, 18 January 2027<br>3:30 PM</div>
+      <p class="where"><b>St. Antony Church</b><br>Sasthan, Udupi</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=St+Antony+Church+Sasthan+Udupi">Directions</a>
+    </div>
+
+    <div class="card">
+      <div class="ico">🥂</div>
+      <h3>Reception</h3>
+      <div class="when">Monday, 18 January 2027<br>Thereafter at 6:00 PM</div>
+      <p class="where"><b>The River Nest Home Stay</b><br>Near Chetana High School, Mabukala Bridge, Udupi</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+River+Nest+Home+Stay+Mabukala+Bridge+Udupi">Directions</a>
+    </div>
+  </div>
+</section>
+
+<section class="rsvp" id="rsvp" style="padding:80px 20px">
+  <div class="reveal">
+    <h2>Will you join us?</h2>
+    <div class="divider">✦ ✦ ✦</div>
+    <p class="lead">Let us know you're coming. Tap send and your reply opens in WhatsApp, ready to go.</p>
+
+    <form id="rsvpForm">
+      <div>
+        <label for="name">Your name</label>
+        <input type="text" id="name" required placeholder="e.g. Maria Fernandes">
+      </div>
+      <div>
+        <label for="guests">Number of guests (including you)</label>
+        <input type="number" id="guests" min="1" max="20" value="1" required>
+      </div>
+      <div>
+        <label for="attend">Can you make it?</label>
+        <select id="attend">
+          <option value="Joyfully accepts">Joyfully accepts 🎉</option>
+          <option value="Regretfully declines">Regretfully declines</option>
+        </select>
+      </div>
+      <fieldset>
+        <label>Which events will you attend?</label>
+        <div class="checks">
+          <label><input type="checkbox" value="Roce (15 Jan)" checked> Roce</label>
+          <label><input type="checkbox" value="Holy Matrimony (18 Jan)" checked> Holy Matrimony</label>
+          <label><input type="checkbox" value="Reception (18 Jan)" checked> Reception</label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="msg">A message for the couple (optional)</label>
+        <textarea id="msg" placeholder="Your wishes…"></textarea>
+      </div>
+      <button class="btn solid" type="submit">Send RSVP via WhatsApp</button>
+    </form>
+    <p class="fineprint">Prefer to call? Numbers are just below.</p>
+  </div>
+</section>
+
+<section class="contact reveal" id="contact">
+  <h2>Get in touch</h2>
+  <div class="divider">✦ ✦ ✦</div>
+  <p style="font-size:1.1rem;color:var(--soft)">💐 Your presence at our celebration is the greatest gift of all.</p>
+  <p style="margin-top:20px">
+    <a href="tel:+919845792028">98457 92028</a> &nbsp;/&nbsp; <a href="tel:+919901639180">99016 39180</a>
+  </p>
+  <p style="margin-top:34px;font-family:'Cormorant Garamond',serif;font-size:1.2rem">
+    With best compliments from<br><b style="color:var(--maroon)">Thomas Romareo Dsouza</b><br><i style="color:var(--soft)">Relatives &amp; Friends</i>
+  </p>
+</section>
+
+<footer>
+  <div class="script">Dominic &amp; Pramela</div>
+  <p>15 · 18 January 2027 · Udupi</p>
+</footer>
+
+<script>
+  // falling petals
+  (function(){
+    const hero=document.querySelector('.hero');
+    for(let i=0;i<16;i++){
+      const p=document.createElement('span');p.className='petal';
+      p.style.left=Math.random()*100+'%';
+      p.style.animationDuration=(8+Math.random()*10)+'s';
+      p.style.animationDelay=(-Math.random()*14)+'s';
+      p.style.transform='scale('+(0.6+Math.random()*0.9)+')';
+      hero.appendChild(p);
+    }
+  })();
+
+  // countdown to Holy Matrimony, 18 Jan 2027 3:30 PM IST (UTC+5:30)
+  const target=new Date('2027-01-18T15:30:00+05:30').getTime();
+  function tick(){
+    let diff=Math.max(0,target-Date.now());
+    const d=Math.floor(diff/864e5);diff%=864e5;
+    const h=Math.floor(diff/36e5);diff%=36e5;
+    const m=Math.floor(diff/6e4);diff%=6e4;
+    const s=Math.floor(diff/1e3);
+    document.getElementById('d').textContent=d;
+    document.getElementById('h').textContent=String(h).padStart(2,'0');
+    document.getElementById('m').textContent=String(m).padStart(2,'0');
+    document.getElementById('s').textContent=String(s).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+
+  // scroll reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // RSVP -> WhatsApp
+  document.getElementById('rsvpForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value.trim();
+    const guests=document.getElementById('guests').value;
+    const attend=document.getElementById('attend').value;
+    const events=[...document.querySelectorAll('.checks input:checked')].map(c=>c.value).join(', ')||'—';
+    const msg=document.getElementById('msg').value.trim();
+    let text='RSVP – Dominic & Pramela\n\nName: '+name+'\nResponse: '+attend+'\nGuests: '+guests;
+    if(attend.startsWith('Joyfully')) text+='\nEvents: '+events;
+    if(msg) text+='\nMessage: '+msg;
+    window.open('https://wa.me/919845792028?text='+encodeURIComponent(text),'_blank');
+  });
+</script>
+</body>
+</html>
